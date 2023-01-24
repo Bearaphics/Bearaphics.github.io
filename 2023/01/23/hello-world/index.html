@@ -448,6 +448,19 @@
 
                     </article>
                     
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;John Doe</strong>
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="http://example.com/2023/01/23/hello-world/">http://example.com/2023/01/23/hello-world/</a>
+        </p>
+    </blockquote>
+
 
 
     <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
@@ -491,6 +504,55 @@
                 
                     <!-- # Comment # -->
                     
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://example.com/2023/01/23/hello-world/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2023/01/23/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//bearaphics.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//bearaphics.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
                 
             </div>
         </div>
@@ -507,7 +569,7 @@
 
     <!-- footer custom text -->
     <p class="footer-text mb-0">
-    
+    Polar Bear Tiger
     </p>
     <!-- footer develop info -->
     <p class="footer-develop mb-0">
@@ -558,6 +620,10 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 
 <!-- Comment -->
+
+    
+        
+    
 
 
 <!-- ### Custom Footer ### -->
